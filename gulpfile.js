@@ -3,6 +3,7 @@ var gulp = require('gulp');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var babelify = require('babelify');
+var browserSync = require('browser-sync');
 
 gulp.task('js', function(){
   browserify('./public/javascripts/src/app.jsx')
@@ -13,7 +14,15 @@ gulp.task('js', function(){
 });
 
 gulp.task('watch', function() {
-  gulp.watch("public/javascripts/src/**/*.jsx", ["js"])
+  gulp.watch("public/javascripts/src/**/*.jsx", ["js", browserSync.reload])
 })
 
-gulp.task('default', ['js', 'watch']);
+gulp.task('browsersync', ['js'], function () {
+  browserSync({
+    proxy: "localhost:3000",
+    notify: false,
+    browser: ["google chrome"]
+  });
+});
+
+gulp.task('default', ['browsersync', 'watch']);
