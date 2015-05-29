@@ -12,6 +12,14 @@
     "express": "~4.12.4",
     "jade": "~1.9.2",
     "morgan": "~1.5.3",
+    "react": "^0.13.3",
     "serve-favicon": "~2.2.1"
+  },
+  "devDependencies": {
+    "browserify": "^10.2.3",
+    "gulp": "^3.8.11",
+    "react": "^0.13.3",
+    "reactify": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
