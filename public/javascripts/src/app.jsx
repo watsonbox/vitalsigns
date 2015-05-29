@@ -1,5 +1,5 @@
-var React = require('react');
-var Component = require('./component.jsx');
+import React from 'react';
+import Component from './component.jsx';
 
 React.render(
     <Component />,

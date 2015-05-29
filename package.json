@@ -16,6 +16,7 @@
     "serve-favicon": "~2.2.1"
   },
   "devDependencies": {
+    "babelify": "^6.1.2",
     "browserify": "^10.2.3",
     "gulp": "^3.8.11",
     "react": "^0.13.3",
